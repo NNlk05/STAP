@@ -1,6 +1,8 @@
-from stap.lexer.Lexer import Lexer
+from click import argument, command, echo, option
 
-from click import command, argument, option, echo
+from stap.lexer.Lexer import Lexer
+from stap.praser.Parser import Parser
+
 
 @command
 @argument("file", help="File to compile")
@@ -10,7 +12,7 @@ def main(file: str) -> None:
         source = f.read()
 
         lexer = Lexer(source)
-        tokens = Lexer.tokenize()
+        tokens = lexer.tokenize()
         parser = Parser(tokens, source)
         ast = parser.parse()
         # TODO: Compile
