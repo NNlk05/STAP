@@ -1,7 +1,7 @@
 [project]
 name = "stap"
 version = "0.1.0"
-description = "Add your description here"
+description = "STAP: STAck Processing"
 readme = "README.md"
 authors = [
     { name = "NNlk05", email = "helloworldfromnowheresvill@gmail.com" }
