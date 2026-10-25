@@ -20,7 +20,6 @@ class Token:
 
 KEYWORDS = {"if", "elseif", "else", "while", "def"}
 
-# Token specifications in priority order (first match wins).
 _TOKEN_SPEC = [
     ("STRING", r'"(?:[^"\\]|\\.)*"'),
     ("SYMBOL", r"[+\-*/=(),{}:\[\]]"),

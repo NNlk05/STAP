@@ -3,6 +3,15 @@ revision = 5
 requires-python = ">=3.13"
 
 [[package]]
+name = "certifi"
+version = "2026.10.23"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fd/11/b524cbd9bbdaca58608e4cf4053fd463417549e1959fa8d3aa18319f9555/certifi-2026.10.23.tar.gz", hash = "sha256:a9895e6e2758b371e0545e321a3a8fd1fcfd9829ada8824a936dfb16aaaf36cd", size = 136225, upload-time = "2026-10-23T11:36:16.478Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/32/d1/a3652fe2c19134d0d15922177821d863cbd7e842d53a21bbe7e8e3a1b5ac/certifi-2026.10.23-py3-none-any.whl", hash = "sha256:e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1", size = 135082, upload-time = "2026-10-23T11:36:14.763Z" },
+]
+
+[[package]]
 name = "click"
 version = "8.5.0"
 source = { registry = "https://pypi.org/simple" }
@@ -60,9 +69,29 @@ dependencies = [
     { name = "pygments" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "uncomment" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "click", specifier = ">=8.5.0" },
     { name = "llvmlite", specifier = ">=0.50.0" },
     { name = "pygments", specifier = ">=2.21.0" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "uncomment", specifier = ">=3.10.3" }]
+
+[[package]]
+name = "uncomment"
+version = "3.10.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "certifi" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/96/d9/164b4033044198299892572fa188e30ed355de72febd1134d579d20b69e0/uncomment-3.10.3.tar.gz", hash = "sha256:10b70741acf3f2204eb323d0eac34cab0d1906629fc292a190a365bdab071fbf", size = 4856, upload-time = "2026-10-10T19:13:40.334Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fd/f3/a808f0da723e51b2c71d9fe75e793c2364bc7475bbe261277bdd8c6d5f6a/uncomment-3.10.3-py3-none-any.whl", hash = "sha256:57b71854cb6a1a9ade113b664bd02a654222aec74bebbb4ca331a31a05206201", size = 5297, upload-time = "2026-10-10T19:13:39.246Z" },
 ]
